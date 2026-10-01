@@ -13,19 +13,69 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tectonic NG | Full-Stack Software Studio & Venture Lab",
+  metadataBase: new URL("https://tectonic-eight.vercel.app"),
+  title: {
+    default: "Tectonic | Software Studio & Venture Lab",
+    template: "%s | Tectonic",
+  },
   description:
-    "We engineer high-performance web, mobile, and interactive 3D software for Nigerian SMEs, Diaspora Founders, and Global Tech Outsourcing teams. Powered by Next.js, Three.js, NestJS, and PostgreSQL.",
+    "Engineering institutional-grade web applications, distributed backend systems, and real-time 3D spatial software for enterprise scale and diaspora ventures.",
   keywords: [
-    "software development nigeria",
-    "lagos tech studio",
-    "next.js developers nigeria",
-    "three.js interactive web",
-    "nestjs backend developers",
-    "diaspora tech partner",
-    "nearshore software outsourcing lagos",
+    "software development studio",
+    "institutional web engineering",
+    "enterprise software lagos",
+    "next.js full-stack systems",
+    "three.js interactive spatial graphics",
+    "nestjs distributed systems",
+    "diaspora technology partner",
+    "nearshore engineering team",
+    "high-performance web applications",
   ],
-  authors: [{ name: "Tectonic NG Technologies" }],
+  authors: [{ name: "Tectonic Studio", url: "https://tectonic-eight.vercel.app" }],
+  creator: "Tectonic Studio",
+  publisher: "Tectonic Studio",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://tectonic-eight.vercel.app",
+    siteName: "Tectonic",
+    title: "Tectonic | Software Studio & Venture Lab",
+    description:
+      "Engineering institutional-grade web applications, distributed backend systems, and real-time 3D spatial software for enterprise scale and diaspora ventures.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tectonic - Software Studio & Venture Lab",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tectonic | Software Studio & Venture Lab",
+    description:
+      "Engineering institutional-grade web applications, distributed backend systems, and real-time 3D spatial software for enterprise scale and diaspora ventures.",
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: "/tectonic-logo.jpg",
+    apple: "/tectonic-logo.jpg",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
