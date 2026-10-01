@@ -160,7 +160,7 @@ export function TectonicHeroCanvas() {
       <div className="absolute right-4 sm:right-8 top-8 sm:top-10 z-20 bg-zinc-900/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-zinc-800 text-left pointer-events-auto shadow-xl">
         <div className="text-[11px] font-mono text-zinc-400">TIMEZONE ALIGNMENT</div>
         <div className="text-xs font-bold text-zinc-200 font-mono mt-0.5">
-          GMT+1 (Lagos / London Real-Time Sync)
+          GMT+1 (Ibadan / London Real-Time Sync)
         </div>
       </div>
 

@@ -32,7 +32,7 @@ export function Footer() {
             <div className="text-[11px] font-mono text-zinc-500 space-y-1">
               <div>Corporate Affairs Commission: <strong>RC-741908</strong></div>
               <div>Data Protection: <strong>NDPR Compliant</strong></div>
-              <div>Headquarters: <strong>Lagos, Nigeria (GMT+1)</strong></div>
+              <div>Headquarters: <strong>Ibadan, Nigeria (GMT+1)</strong></div>
             </div>
           </div>
 

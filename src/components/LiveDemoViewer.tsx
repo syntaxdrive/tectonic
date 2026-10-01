@@ -541,7 +541,7 @@ function ContractsDemo() {
           </div>
 
           <div className="text-xs text-zinc-600 font-mono leading-relaxed space-y-2 bg-zinc-50 p-4 rounded-lg border border-zinc-200">
-            <p><strong>Parties:</strong> AfriTrust Capital Ltd (London) &amp; Tectonic NG Technologies (Lagos).</p>
+            <p><strong>Parties:</strong> AfriTrust Capital Ltd (London) &amp; Tectonic NG Technologies (Ibadan).</p>
             <p><strong>Release Condition:</strong> Passing automated test suite and production build verification.</p>
             <p><strong>Escrow Value:</strong> $4,500.00 USD (Regulated Domiciliary Depository).</p>
           </div>

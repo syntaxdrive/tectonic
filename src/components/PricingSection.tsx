@@ -59,7 +59,7 @@ export function PricingSection() {
         "Offline-resilient data synchronization for poor network",
         "Role-based staff clearance (prevent internal leakage and fraud)",
         "Automated WhatsApp & SMS customer transaction dispatch",
-        "On-site staff onboarding in Lagos or remote orientation",
+        "On-site staff onboarding (Ibadan / Lagos) or remote orientation",
         "Direct local technical support desk",
         "99.9% uptime hosting configuration",
       ],

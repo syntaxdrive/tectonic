@@ -56,7 +56,7 @@ export function ContactSection() {
                 <div>
                   <div className="text-[11px] font-mono uppercase text-zinc-400">Engineering Headquarters</div>
                   <div className="text-sm font-semibold text-zinc-950">
-                    Lagos, Nigeria (GMT+1) • Global Distributed
+                    Ibadan, Nigeria (GMT+1) • Global Distributed
                   </div>
                 </div>
               </div>

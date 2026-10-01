@@ -23,7 +23,9 @@ export const metadata: Metadata = {
   keywords: [
     "software development studio",
     "institutional web engineering",
+    "enterprise software ibadan",
     "enterprise software lagos",
+    "ibadan software studio",
     "next.js full-stack systems",
     "three.js interactive spatial graphics",
     "nestjs distributed systems",
