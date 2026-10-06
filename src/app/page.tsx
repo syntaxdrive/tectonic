@@ -6,7 +6,6 @@ import { PortfolioSection } from "@/components/PortfolioSection";
 import { BlueprintsSection } from "@/components/BlueprintsSection";
 import { PillarsSection } from "@/components/PillarsSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
-import { ProjectCalculator } from "@/components/ProjectCalculator";
 import { PricingSection } from "@/components/PricingSection";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
@@ -37,9 +36,6 @@ export default function Home() {
 
         {/* Tech Stack & Architecture Deep Dive */}
         <ArchitectureSection />
-
-        {/* Interactive Scope & Cost Calculator (Dual Currency NGN/USD) */}
-        <ProjectCalculator />
 
         {/* Productized Pricing Sprints & Pod Retainers */}
         <PricingSection />
