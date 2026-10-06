@@ -37,10 +37,10 @@ export function Hero() {
           </a>
 
           <a
-            href="#portfolio"
+            href="#projects"
             className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3 rounded-lg bg-white text-zinc-700 text-sm font-semibold border border-zinc-200 hover:bg-zinc-50 transition-all active:scale-95"
           >
-            View Our Work
+            Explore Projects
           </a>
         </div>
 

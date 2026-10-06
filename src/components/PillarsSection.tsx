@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import { Check, ArrowRight } from "lucide-react";
+import { ModelCardViewer } from "./ModelCardViewer";
 
 export function PillarsSection() {
   const pillars = [
@@ -8,6 +11,8 @@ export function PillarsSection() {
       badge: "Segment 01",
       title: "Real Estate & Architecture",
       subtitle: "Help buyers see it before it is built. Interactive 3D walkthroughs, photorealistic renders, and property websites that close deals faster.",
+      modelPath: "/models/sofa.glb",
+      modelBadge: "Architectural Interior",
       features: [
         "Interactive architectural walkthroughs with real-world materials and lighting",
         "Property listing sites with booking, virtual tour, and inquiry flow",
@@ -21,6 +26,8 @@ export function PillarsSection() {
       badge: "Segment 02",
       title: "Retail, Fashion & Products",
       subtitle: "Showcase your products in stunning detail. Real-time 3D configurators, brand-forward online stores, and business tools that run your operations.",
+      modelPath: "/models/rolex.glb",
+      modelBadge: "Product Configurator",
       features: [
         "3D product configurators — change colour, material, and finish in real time",
         "Online stores and lookbooks with fast mobile checkout",
@@ -32,15 +39,17 @@ export function PillarsSection() {
     {
       id: "international",
       badge: "Segment 03",
-      title: "International & Diaspora Brands",
+      title: "Robotics & Engineering",
       subtitle: "Premium web and 3D production from Ibadan, delivered to international standards. Billed in USD or GBP with clear milestones and full ownership.",
+      modelPath: "/models/robot.glb",
+      modelBadge: "Robotics Assembly",
       features: [
         "Photorealistic Three.js and WebGL production for European and UK clients",
         "Full-stack websites and web applications in Next.js",
         "Direct GMT+1 timezone alignment with London and European teams",
         "Fixed-scope delivery with 100% intellectual property assignment",
       ],
-      ctaText: "Inquire on International",
+      ctaText: "Inquire on Engineering",
     },
   ];
 
@@ -66,14 +75,25 @@ export function PillarsSection() {
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="bg-zinc-50 rounded-2xl p-8 border border-zinc-100 flex flex-col justify-between hover:border-zinc-200 transition-colors"
+              className="bg-zinc-50 rounded-2xl p-6 sm:p-8 border border-zinc-200/80 flex flex-col justify-between hover:border-zinc-300 transition-all shadow-xs"
             >
               <div>
-                <span className="inline-block text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-zinc-200 text-zinc-600 mb-6">
-                  {pillar.badge}
-                </span>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="inline-block text-[10px] font-mono font-medium px-2.5 py-0.5 rounded-full bg-zinc-200 text-zinc-700">
+                    {pillar.badge}
+                  </span>
+                </div>
 
-                <h3 className="text-xl font-semibold text-zinc-950 tracking-tight mb-3">
+                {/* Live 3D Interactive Model Embed */}
+                <div className="mb-5">
+                  <ModelCardViewer
+                    modelPath={pillar.modelPath}
+                    badgeLabel={pillar.modelBadge}
+                    heightClass="h-44 sm:h-48"
+                  />
+                </div>
+
+                <h3 className="text-xl font-semibold text-zinc-950 tracking-tight mb-2">
                   {pillar.title}
                 </h3>
 

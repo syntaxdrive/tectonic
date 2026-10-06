@@ -72,11 +72,7 @@ export function Navbar() {
             </div>
           </div>
 
-          <a href="#portfolio" className="hover:text-zinc-950 transition-colors">
-            Our Work
-          </a>
-
-          <a href="#blueprints" className="hover:text-zinc-950 transition-colors">
+          <a href="#projects" className="hover:text-zinc-950 transition-colors">
             Projects
           </a>
 
@@ -121,10 +117,7 @@ export function Navbar() {
           <a href="#solutions" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded text-sm font-medium text-zinc-900 hover:bg-zinc-50">
             Services
           </a>
-          <a href="#portfolio" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded text-sm font-medium text-zinc-700 hover:bg-zinc-50">
-            Our Work
-          </a>
-          <a href="#blueprints" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded text-sm font-medium text-zinc-700 hover:bg-zinc-50">
+          <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded text-sm font-medium text-zinc-700 hover:bg-zinc-50">
             Projects
           </a>
           <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="block px-3 py-2 rounded text-sm font-medium text-zinc-700 hover:bg-zinc-50">

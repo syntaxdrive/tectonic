@@ -2,7 +2,6 @@ import React from "react";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { TechLogos } from "@/components/TechLogos";
-import { PortfolioSection } from "@/components/PortfolioSection";
 import { BlueprintsSection } from "@/components/BlueprintsSection";
 import { PillarsSection } from "@/components/PillarsSection";
 import { ArchitectureSection } from "@/components/ArchitectureSection";
@@ -24,9 +23,6 @@ export default function Home() {
 
         {/* Core Technologies & Integration Partners */}
         <TechLogos />
-
-        {/* Case Studies & Proven Portfolio */}
-        <PortfolioSection />
 
         {/* Ready-to-Deploy Open Source Software Blueprints */}
         <BlueprintsSection />

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { ArrowUpRight, Play } from "lucide-react";
 import { LiveDemoViewer } from "./LiveDemoViewer";
+import { ModelCardViewer } from "./ModelCardViewer";
 
 interface Project {
   id: string;
@@ -16,6 +17,8 @@ interface Project {
   solution: string;
   metrics: { label: string; value: string }[];
   tags: string[];
+  modelPath?: string;
+  modelBadge?: string;
 }
 
 export function PortfolioSection() {
@@ -31,6 +34,8 @@ export function PortfolioSection() {
       demoKey: "threejs",
       client: "Primrose Haven Residences",
       location: "Ibadan & Lagos, Nigeria",
+      modelPath: "/models/sofa.glb",
+      modelBadge: "Interactive Spatial 3D",
       problem:
         "Prospective buyers hesitated on off-plan purchases due to generic 2D blueprints that failed to convey natural lighting, spatial volume, and material luxury.",
       solution:
@@ -50,6 +55,8 @@ export function PortfolioSection() {
       demoKey: "commerce",
       client: "Oduwa Luxury Apparel",
       location: "Lagos & London",
+      modelPath: "/models/rolex.glb",
+      modelBadge: "Real-Time Product 3D",
       problem:
         "High bounce rates and cart abandonment on luxury fashion collections because standard product photos couldn't showcase fine tailoring and finish options.",
       solution:
@@ -167,9 +174,19 @@ export function PortfolioSection() {
                 <h3 className="text-xl sm:text-2xl font-semibold text-zinc-950 tracking-tight mb-1">
                   {item.title}
                 </h3>
-                <div className="text-xs font-mono text-zinc-500 mb-6">
+                <div className="text-xs font-mono text-zinc-500 mb-5">
                   Client: {item.client}
                 </div>
+
+                {item.modelPath && (
+                  <div className="mb-5">
+                    <ModelCardViewer
+                      modelPath={item.modelPath}
+                      badgeLabel={item.modelBadge}
+                      heightClass="h-44 sm:h-52"
+                    />
+                  </div>
+                )}
 
                 {/* Problem vs Solution Brief */}
                 <div className="space-y-3 mb-6 text-xs text-zinc-600">

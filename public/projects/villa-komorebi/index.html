@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komorebi Private Residence — Architectural Retreat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    .mono { font-family: 'Space Mono', monospace; }
+  </style>
+</head>
+<body class="bg-[#F8F6F2] text-[#212120] antialiased selection:bg-[#212120] selection:text-[#F8F6F2]">
+
+  <!-- Top Studio Back Bar -->
+  <aside class="bg-[#1C1B1A] text-[#D8D5CF] text-xs py-2 px-4 border-b border-[#2B2927] flex items-center justify-between">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+      <span class="mono text-[11px] tracking-wider uppercase">Live Project Demo &bull; Built by Tectonic</span>
+    </div>
+    <a href="/#projects" class="mono text-[11px] underline hover:text-white flex items-center gap-1">
+      &larr; Back to Tectonic Studio
+    </a>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="border-b border-[#E6E2D8] bg-[#F8F6F2]/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div>
+        <a href="#" class="serif text-2xl tracking-wide font-medium text-[#1A1918]">KOMOREBI</a>
+        <div class="mono text-[10px] tracking-widest uppercase text-[#736F68]">Iyaganku GRA &bull; Ibadan</div>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-xs mono tracking-wider uppercase text-[#54514B]">
+        <a href="#overview" class="hover:text-black transition-colors">The Grounds</a>
+        <a href="#suites" class="hover:text-black transition-colors">Suites</a>
+        <a href="#spatial-3d" class="hover:text-black transition-colors">3D Walkthrough</a>
+        <a href="#amenities" class="hover:text-black transition-colors">Specifications</a>
+        <a href="#reserve" class="hover:text-black transition-colors">Inquire</a>
+      </nav>
+      <a href="#reserve" class="px-5 py-2.5 bg-[#212120] text-[#F8F6F2] text-xs mono tracking-wider uppercase rounded-full hover:bg-black transition-all">
+        Reserve Stay
+      </a>
+    </div>
+  </header>
+
+  <!-- Editorial Hero -->
+  <section class="max-w-6xl mx-auto px-6 pt-16 pb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+      <div class="lg:col-span-8">
+        <span class="mono text-xs tracking-widest uppercase text-[#8C877D] block mb-4">
+          Private Residence &bull; Est. 2024 &bull; Plot 14, Ring Road Ridge
+        </span>
+        <h1 class="serif text-5xl sm:text-7xl lg:text-8xl font-normal leading-[0.98] text-[#1A1918]">
+          Architecture rooted in silence and filtered light.
+        </h1>
+      </div>
+      <div class="lg:col-span-4 space-y-4">
+        <p class="text-sm leading-relaxed text-[#59554E]">
+          Four private pavilion suites positioned between mature mahogany and teak groves. Designed for executive retreats, quiet creative residencies, and private dining in southwestern Nigeria.
+        </p>
+        <div class="pt-4 border-t border-[#E1DDD3] flex items-center justify-between mono text-xs text-[#59554E]">
+          <span>Nightly Rate: ₦380,000 / $250</span>
+          <span>4 Suites &bull; 8 Guests</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Architectural Imagery Grid -->
+    <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-2xl overflow-hidden bg-[#ECE8DF] border border-[#DDD8CD] p-8 flex flex-col justify-between min-h-[320px]">
+        <div class="mono text-xs text-[#706B62]">01 / ARCHITECTURE</div>
+        <div>
+          <h3 class="serif text-2xl text-[#1A1918] mb-2">Passive Earth Architecture</h3>
+          <p class="text-xs text-[#59554E] leading-relaxed">
+            Rammed earth and basalt concrete thermal mass designed to reduce internal temperatures by 6&deg;C without active air conditioning.
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden bg-[#212120] text-[#F8F6F2] p-8 flex flex-col justify-between min-h-[320px]">
+        <div class="mono text-xs text-[#9E9B94]">02 / AUTONOMY</div>
+        <div>
+          <h3 class="serif text-2xl text-[#F8F6F2] mb-2">Dedicated Solar Microgrid</h3>
+          <p class="text-xs text-[#B5B2A9] leading-relaxed">
+            30kVA lithium battery storage with 100% solar recharge capacity, independent deep-aquifer borehole filtration, and silent utility fallback.
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden bg-[#ECE8DF] border border-[#DDD8CD] p-8 flex flex-col justify-between min-h-[320px]">
+        <div class="mono text-xs text-[#706B62]">03 / WELLNESS</div>
+        <div>
+          <h3 class="serif text-2xl text-[#1A1918] mb-2">Saltwater Courtyard Lap Pool</h3>
+          <p class="text-xs text-[#59554E] leading-relaxed">
+            An 18-meter mineralized pool enclosed by volcanic basalt tiles and open-air bamboo screening for complete visual privacy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 3D Spatial Walkthrough Section -->
+  <section id="spatial-3d" class="py-20 bg-[#1C1B1A] text-[#F8F6F2] border-y border-[#2E2C29]">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl mb-10">
+        <span class="mono text-xs tracking-widest uppercase text-emerald-400 block mb-2">
+          &bull; Real-Time WebGL &bull; Three.js Engine
+        </span>
+        <h2 class="serif text-4xl sm:text-5xl font-normal leading-tight text-white">
+          Inspect the Master Suite Lounge in 360&deg;
+        </h2>
+        <p class="text-xs text-[#A8A49C] mt-3 leading-relaxed">
+          Test the interior furniture volume before visiting. Click, drag, and rotate the lounge suite below. Rendered live in your browser using physical PBR velvet and brass materials.
+        </p>
+      </div>
+
+      <!-- 3D Viewport Container -->
+      <div class="relative w-full h-[460px] md:h-[520px] rounded-2xl overflow-hidden bg-[#141312] border border-[#33312D]">
+        <div id="three-container" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+
+        <div id="loading-badge" class="absolute inset-0 flex items-center justify-center bg-[#141312]/80 text-xs mono text-[#A8A49C] gap-2">
+          <span>Streaming 3D Spatial Assets...</span>
+        </div>
+
+        <div class="absolute bottom-4 left-4 mono text-[11px] text-[#A8A49C] bg-[#242220]/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#3A3834] pointer-events-none">
+          Material: Emerald Velvet &bull; Polished Brass &bull; 60 FPS
+        </div>
+
+        <div class="absolute bottom-4 right-4 mono text-[11px] text-[#A8A49C] bg-[#242220]/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-[#3A3834] pointer-events-none">
+          Click &amp; Drag to Orbit
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation Inquiry Drawer -->
+  <section id="reserve" class="py-20 max-w-4xl mx-auto px-6">
+    <div class="bg-white rounded-3xl p-8 sm:p-12 border border-[#E3DFD5] shadow-sm">
+      <div class="text-center max-w-lg mx-auto mb-10">
+        <span class="mono text-xs uppercase tracking-widest text-[#8C877D] block mb-2">Direct Booking Desk</span>
+        <h2 class="serif text-4xl text-[#1A1918]">Request Private Stay</h2>
+        <p class="text-xs text-[#6E6A62] mt-2">
+          Stays are reviewed individually to preserve residence tranquility. Minimum 2-night stay for full pavilion booking.
+        </p>
+      </div>
+
+      <form id="booking-form" class="space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block mono text-[11px] uppercase text-[#6E6A62] mb-1">Full Name</label>
+            <input type="text" required placeholder="Amina Bello" class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] text-sm focus:outline-none focus:border-black bg-[#FAF9F6]">
+          </div>
+          <div>
+            <label class="block mono text-[11px] uppercase text-[#6E6A62] mb-1">Email or Phone</label>
+            <input type="text" required placeholder="amina@domain.com" class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] text-sm focus:outline-none focus:border-black bg-[#FAF9F6]">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div>
+            <label class="block mono text-[11px] uppercase text-[#6E6A62] mb-1">Check-in Date</label>
+            <input type="date" required class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] text-sm focus:outline-none focus:border-black bg-[#FAF9F6]">
+          </div>
+          <div>
+            <label class="block mono text-[11px] uppercase text-[#6E6A62] mb-1">Check-out Date</label>
+            <input type="date" required class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] text-sm focus:outline-none focus:border-black bg-[#FAF9F6]">
+          </div>
+          <div>
+            <label class="block mono text-[11px] uppercase text-[#6E6A62] mb-1">Party Size</label>
+            <select class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] text-sm focus:outline-none focus:border-black bg-[#FAF9F6]">
+              <option>1–2 Guests (Single Suite)</option>
+              <option>3–4 Guests (Dual Suite)</option>
+              <option selected>Full Compound (Up to 8 Guests)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block mono text-[11px] uppercase text-[#6E6A62] mb-1">Special Requirements (Private Chef, Airport Transfer)</label>
+          <textarea rows="3" placeholder="Tell us about dietary preferences or transfer needs..." class="w-full px-4 py-3 rounded-xl border border-[#D9D4C7] text-sm focus:outline-none focus:border-black bg-[#FAF9F6]"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-4 bg-[#212120] text-[#F8F6F2] mono text-xs uppercase tracking-wider rounded-xl hover:bg-black transition-all">
+          Submit Private Reservation Request
+        </button>
+      </form>
+
+      <div id="booking-confirmed" class="hidden text-center py-8">
+        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center font-bold mb-3">&check;</div>
+        <h3 class="serif text-2xl text-[#1A1918]">Reservation Brief Received</h3>
+        <p class="text-xs text-[#6E6A62] mt-1">Our residence concierge will respond with availability confirmation within 2 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-[#E1DDD3] py-12 text-center text-xs mono text-[#7A756D]">
+    <p>Komorebi Private Retreat &bull; Managed by Tectonic Hospitality &bull; Iyaganku GRA, Ibadan</p>
+    <p class="mt-2 text-[11px] text-[#A6A29A]">Bespoke Web Platform Designed &amp; Engineered by Tectonic NG Technologies</p>
+  </footer>
+
+  <!-- Three.js Interactive 3D Setup Script -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('three-container');
+      const loaderBadge = document.getElementById('loading-badge');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x141312);
+
+      const camera = new THREE.PerspectiveCamera(40, container.clientWidth / container.clientHeight, 0.1, 100);
+      camera.position.set(2.8, 1.8, 3.8);
+
+      const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.2;
+      container.appendChild(renderer.domElement);
+
+      const controls = new THREE.OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.dampingFactor = 0.05;
+      controls.autoRotate = true;
+      controls.autoRotateSpeed = 0.6;
+      controls.enableZoom = false;
+      controls.target.set(0, 0.35, 0);
+
+      // Lights
+      const ambientLight = new THREE.AmbientLight(0xfff7ed, 1.2);
+      scene.add(ambientLight);
+      const keyLight = new THREE.DirectionalLight(0xffedd5, 2.4);
+      keyLight.position.set(4, 5, 3);
+      scene.add(keyLight);
+      const fillLight = new THREE.DirectionalLight(0x93c5fd, 0.9);
+      fillLight.position.set(-3, 2, -2);
+      scene.add(fillLight);
+
+      // Ground Disc
+      const discGeo = new THREE.CylinderGeometry(2.0, 2.1, 0.1, 48);
+      const discMat = new THREE.MeshStandardMaterial({ color: 0x1d1c1a, roughness: 0.8 });
+      const disc = new THREE.Mesh(discGeo, discMat);
+      disc.position.y = -0.05;
+      scene.add(disc);
+
+      // GLTF Loader with Draco
+      const dracoLoader = new THREE.DRACOLoader();
+      dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.7/');
+      const loader = new THREE.GLTFLoader();
+      loader.setDRACOLoader(dracoLoader);
+
+      const modelGroup = new THREE.Group();
+      scene.add(modelGroup);
+
+      loader.load('/models/sofa.glb', (gltf) => {
+        const model = gltf.scene;
+        const box = new THREE.Box3().setFromObject(model);
+        const size = box.getSize(new THREE.Vector3());
+        const center = box.getCenter(new THREE.Vector3());
+        const maxDim = Math.max(size.x, size.y, size.z);
+        const scale = 2.0 / (maxDim || 1);
+
+        model.scale.setScalar(scale);
+        model.position.set(-center.x * scale, -box.min.y * scale, -center.z * scale);
+        modelGroup.add(model);
+
+        if (loaderBadge) loaderBadge.classList.add('hidden');
+      });
+
+      window.addEventListener('resize', () => {
+        camera.aspect = container.clientWidth / container.clientHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(container.clientWidth, container.clientHeight);
+      });
+
+      function animate() {
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(scene, camera);
+      }
+      animate();
+
+      // Form handler
+      const form = document.getElementById('booking-form');
+      const confirmed = document.getElementById('booking-confirmed');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          form.classList.add('hidden');
+          confirmed.classList.remove('hidden');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
