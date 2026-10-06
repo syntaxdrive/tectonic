@@ -59,7 +59,7 @@ export function BlueprintsSection() {
       badgeColor: "bg-zinc-100 text-zinc-800",
       deploymentTime: "7–14 Days",
       techStack: ["Three.js", "React 19", "WebGL", "Next.js 16"],
-      liveUrl: "/projects/villa-komorebi/",
+      liveUrl: "/projects/villa-komorebi/index.html",
       modelPath: "/models/sofa.glb",
       description:
         "Bespoke Japanese-Scandinavian architectural residence in Ibadan. Features a live 360° lounge model, floor plan breakdowns, and direct reservation calendar.",
@@ -104,7 +104,7 @@ export function BlueprintsSection() {
       badgeColor: "bg-zinc-100 text-zinc-800",
       deploymentTime: "7–10 Days",
       techStack: ["Three.js", "WebGL", "Paystack Rails", "TailwindCSS"],
-      liveUrl: "/projects/vanguard-horology/",
+      liveUrl: "/projects/vanguard-horology/index.html",
       modelPath: "/models/rolex.glb",
       description:
         "Mechanical horology studio showcasing cold-forged 904L steel timepieces with live interactive 3D rotation, technical data sheets, and Paystack allocation checkout.",
@@ -149,7 +149,7 @@ export function BlueprintsSection() {
       badgeColor: "bg-zinc-100 text-zinc-800",
       deploymentTime: "5–7 Days",
       techStack: ["Next.js 16", "PostgreSQL", "Termii SMS", "Paystack"],
-      liveUrl: "/projects/apex-diagnostics/",
+      liveUrl: "/projects/apex-diagnostics/index.html",
       modelPath: "/models/robot.glb",
       description:
         "Medical diagnostic laboratory portal in Ibadan with transparent panel pricing, cold-chain home phlebotomy booking, and automated result dispatch.",
