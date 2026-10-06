@@ -6,10 +6,10 @@ import {
   Box,
   CreditCard,
   Calendar,
+  UtensilsCrossed,
   X,
   Layers,
   ExternalLink,
-  ArrowRight,
 } from "lucide-react";
 import { ModelCardViewer } from "./ModelCardViewer";
 
@@ -27,7 +27,8 @@ interface Blueprint {
   features: string[];
   idealFor: string;
   liveUrl: string;
-  modelPath: string;
+  modelPath?: string;
+  imageUrl?: string;
   architectureDetails: {
     frontend: string;
     backend: string;
@@ -49,6 +50,51 @@ export function BlueprintsSection() {
   const [activeModalBlueprint, setActiveModalBlueprint] = useState<Blueprint | null>(null);
 
   const blueprints: Blueprint[] = [
+    {
+      id: "quick-invoice",
+      name: "Tectonic Invoice & Settlement Engine",
+      subtitle: "Interactive in-browser commercial invoicing application with VAT calculations & PDF export.",
+      category: "Business Tool & Invoicing",
+      icon: CreditCard,
+      badge: "Functional Web Application (No 3D)",
+      badgeColor: "bg-zinc-100 text-zinc-800",
+      deploymentTime: "5–7 Days",
+      techStack: ["Vanilla JS", "TailwindCSS", "Print Engine", "Next.js"],
+      liveUrl: "/projects/quick-invoice/index.html",
+      imageUrl: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=900&q=80",
+      description:
+        "A working financial software tool built for Nigerian SMEs and consultancies. Generates itemized invoices, computes 7.5% VAT and WHT deductions, and prints clean client PDFs.",
+      features: [
+        "Live dynamic line-item addition with real-time subtotal computation",
+        "Configurable 7.5% Nigerian VAT and 5% Withholding Tax (WHT) toggles",
+        "Multi-currency support: Nigerian Naira (₦), US Dollar ($), British Pound (£)",
+        "Zero-dependency instant browser PDF export & print stylesheet",
+      ],
+      idealFor: "Service Agencies, Consultancies, Freelancers, SME Contractors",
+      architectureDetails: {
+        frontend: "Responsive utility-first workspace (JetBrains Mono + Plus Jakarta)",
+        backend: "Client-side state machine with zero server roundtrips",
+        database: "Local storage persistence & session cache",
+        localization: "Nigerian NGN Naira formatting & banking details",
+        hosting: "Edge deployed on Vercel with zero latency",
+      },
+      mockupDetails: {
+        heading: "Commercial Invoicing Telemetry",
+        stats: [
+          { label: "Execution Time", value: "< 2 ms" },
+          { label: "VAT Auto-Calc", value: "7.5%" },
+          { label: "Export Format", value: "Print / PDF" },
+        ],
+        recentActivity: [
+          "[Invoice Created] Ref #INV-2026-084 initialized",
+          "[VAT Computed] 7.5% applied to milestone ledger",
+          "[Export Engine] Clean print stylesheet rendered",
+        ],
+      },
+      pricingFlat: "$350",
+      pricingNGN: "₦450,000",
+      monthlyManaged: "Optional ₦35k/mo maintenance",
+    },
     {
       id: "villa-komorebi",
       name: "Komorebi Sanctuary & Residence",
@@ -95,6 +141,96 @@ export function BlueprintsSection() {
       monthlyManaged: "Optional ₦65k/mo updates",
     },
     {
+      id: "apex-diagnostics",
+      name: "Apex Care Diagnostics & Pathology",
+      subtitle: "Accredited Ibadan clinical laboratory portal with 48 diagnostic test directories and slot booking.",
+      category: "Healthcare & Booking Automation",
+      icon: Calendar,
+      badge: "Pure Web Engine (No 3D)",
+      badgeColor: "bg-zinc-100 text-zinc-800",
+      deploymentTime: "5–7 Days",
+      techStack: ["Next.js 16", "PostgreSQL", "Termii SMS", "Paystack"],
+      liveUrl: "/projects/apex-diagnostics/index.html",
+      imageUrl: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=900&q=80",
+      description:
+        "Medical diagnostic laboratory portal in Ibadan with transparent panel pricing, cold-chain home phlebotomy booking, and automated result dispatch.",
+      features: [
+        "48-panel test directory with transparent pricing (₦15k – ₦42k)",
+        "Fasting appointment scheduler with strict morning slot reservation",
+        "Home phlebotomy sample pickup option (+₦5,000 logistics)",
+        "Automated result dispatch to patient WhatsApp and doctor portal",
+      ],
+      idealFor: "Private Medical Clinics, Pathology Labs, Dental Practices",
+      architectureDetails: {
+        frontend: "Clean Swiss clinical UI (Plus Jakarta Sans + IBM Plex)",
+        backend: "SMS & WhatsApp result automation workers",
+        database: "Encrypted PostgreSQL records (NDPR compliant)",
+        localization: "Ibadan clinic (Ring Road) local logistics routing",
+        hosting: "High-security Vercel / Supabase backend",
+      },
+      mockupDetails: {
+        heading: "Clinical Pathology Appointment Desk",
+        stats: [
+          { label: "Monthly Bookings", value: "180+ Slots" },
+          { label: "No-Show Drop", value: "-65%" },
+          { label: "Result SLA", value: "4.2 Hours" },
+        ],
+        recentActivity: [
+          "[Slot Booked] 08:30 AM Fasting Panel reserved",
+          "[Logistics] Home phlebotomy assigned to courier",
+          "[Result Alert] Encrypted PDF dispatched via WhatsApp",
+        ],
+      },
+      pricingFlat: "$400",
+      pricingNGN: "₦500,000",
+      monthlyManaged: "Optional ₦40k/mo maintenance",
+    },
+    {
+      id: "sula-coffee",
+      name: "Sula Roastery & All-Day Kitchen",
+      subtitle: "Specialty coffee roastery & artisan eatery website with live visual menu and table bookings.",
+      category: "Hospitality & Digital Menus",
+      icon: UtensilsCrossed,
+      badge: "Pure Editorial Web (No 3D)",
+      badgeColor: "bg-zinc-100 text-zinc-800",
+      deploymentTime: "4–6 Days",
+      techStack: ["HTML5 / CSS", "TailwindCSS", "WhatsApp Commerce", "Next.js"],
+      liveUrl: "/projects/sula-coffee/index.html",
+      imageUrl: "https://images.unsplash.com/photo-1509785307050-d4066910ec1e?auto=format&fit=crop&w=900&q=80",
+      description:
+        "Tactile culinary experience for a specialty roaster in Jericho, Ibadan. Features single-origin brew bar notes, live table reservation, and takeaway ordering.",
+      features: [
+        "Visual menu directory with seasonal pricing & origin tasting notes",
+        "Interactive table reservation desk (Sun Garden vs Timber Lounge)",
+        "Direct WhatsApp click-to-order flow for beans and takeaway",
+        "High-contrast editorial serif typography and zero template bloat",
+      ],
+      idealFor: "Boutique Cafes, Artisan Bakeries, Restaurants, Private Dining",
+      architectureDetails: {
+        frontend: "Editorial typography (Italiana + Plus Jakarta Sans)",
+        backend: "WhatsApp Business API lead routing",
+        database: "PostgreSQL table reservation log",
+        localization: "Local Ibadan pickup & delivery logistics",
+        hosting: "Instant global Vercel Edge caching",
+      },
+      mockupDetails: {
+        heading: "Hospitality Table & Order Flow",
+        stats: [
+          { label: "Table Bookings", value: "94 / wk" },
+          { label: "Page Speed", value: "0.6s" },
+          { label: "Mobile Share", value: "86%" },
+        ],
+        recentActivity: [
+          "[Reservation] Sun Garden Terrace table confirmed",
+          "[Retail Order] 2x Taraba Highland beans ordered",
+          "[Ticket] WhatsApp reservation pass issued",
+        ],
+      },
+      pricingFlat: "$350",
+      pricingNGN: "₦450,000",
+      monthlyManaged: "Optional ₦35k/mo updates",
+    },
+    {
       id: "vanguard-horology",
       name: "Vanguard Atelier & Horology",
       subtitle: "Bespoke mechanical watch atelier with 360° 3D timepiece orbit, specs sheet, and allocation drawer.",
@@ -139,51 +275,6 @@ export function BlueprintsSection() {
       pricingNGN: "₦750,000",
       monthlyManaged: "Optional ₦50k/mo maintenance",
     },
-    {
-      id: "apex-diagnostics",
-      name: "Apex Care Diagnostics & Pathology",
-      subtitle: "Accredited Ibadan clinical laboratory portal with 48 diagnostic test directories and slot booking.",
-      category: "Healthcare & Booking Automation",
-      icon: Calendar,
-      badge: "Automated Patient Engine",
-      badgeColor: "bg-zinc-100 text-zinc-800",
-      deploymentTime: "5–7 Days",
-      techStack: ["Next.js 16", "PostgreSQL", "Termii SMS", "Paystack"],
-      liveUrl: "/projects/apex-diagnostics/index.html",
-      modelPath: "/models/robot.glb",
-      description:
-        "Medical diagnostic laboratory portal in Ibadan with transparent panel pricing, cold-chain home phlebotomy booking, and automated result dispatch.",
-      features: [
-        "48-panel test directory with transparent pricing (₦15k – ₦42k)",
-        "Fasting appointment scheduler with strict morning slot reservation",
-        "Home phlebotomy sample pickup option (+₦5,000 logistics)",
-        "Automated result dispatch to patient WhatsApp and doctor portal",
-      ],
-      idealFor: "Private Medical Clinics, Pathology Labs, Dental Practices",
-      architectureDetails: {
-        frontend: "Next.js 16 mobile-first patient intake portal",
-        backend: "SMS & WhatsApp result automation workers",
-        database: "Encrypted PostgreSQL records (NDPR compliant)",
-        localization: "Ibadan clinic (Ring Road) local logistics routing",
-        hosting: "High-security Vercel / Supabase backend",
-      },
-      mockupDetails: {
-        heading: "Clinical Pathology Appointment Desk",
-        stats: [
-          { label: "Monthly Bookings", value: "180+ Slots" },
-          { label: "No-Show Drop", value: "-65%" },
-          { label: "Result SLA", value: "4.2 Hours" },
-        ],
-        recentActivity: [
-          "[Slot Booked] 08:30 AM Fasting Panel reserved",
-          "[Logistics] Home phlebotomy assigned to courier",
-          "[Result Alert] Encrypted PDF dispatched via WhatsApp",
-        ],
-      },
-      pricingFlat: "$400",
-      pricingNGN: "₦500,000",
-      monthlyManaged: "Optional ₦40k/mo maintenance",
-    },
   ];
 
   return (
@@ -201,12 +292,12 @@ export function BlueprintsSection() {
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-zinc-500 leading-relaxed">
-            Explore real standalone websites, interactive 3D WebGL experiences, and business automation tools engineered by Tectonic. Click any project to open the live site.
+            Explore real standalone websites, editorial digital platforms, and 3D WebGL experiences built by Tectonic. Click any project to open the live site.
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Projects Grid (2x2 on desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {blueprints.map((item) => {
             const Icon = item.icon;
             return (
@@ -226,13 +317,27 @@ export function BlueprintsSection() {
                     </span>
                   </div>
 
-                  {/* 3D Model Card Viewport */}
+                  {/* Media: 3D Model Viewer OR Editorial Web Photo */}
                   <div className="mb-5">
-                    <ModelCardViewer
-                      modelPath={item.modelPath}
-                      badgeLabel={item.category}
-                      heightClass="h-44 sm:h-48"
-                    />
+                    {item.modelPath ? (
+                      <ModelCardViewer
+                        modelPath={item.modelPath}
+                        badgeLabel={item.category}
+                        heightClass="h-48 sm:h-52"
+                      />
+                    ) : item.imageUrl ? (
+                      <div className="relative w-full h-48 sm:h-52 rounded-xl overflow-hidden bg-zinc-100 border border-zinc-200 group">
+                        <img
+                          src={item.imageUrl}
+                          alt={item.name}
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-zinc-950/80 backdrop-blur-md text-[10px] font-mono text-white">
+                          {item.category}
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
 
                   {/* Title & Category */}
@@ -353,13 +458,23 @@ export function BlueprintsSection() {
               {activeModalBlueprint.subtitle}
             </p>
 
-            {/* Embedded 3D Model in Modal */}
+            {/* Modal Media: 3D or Photo */}
             <div className="mt-5">
-              <ModelCardViewer
-                modelPath={activeModalBlueprint.modelPath}
-                badgeLabel={activeModalBlueprint.category}
-                heightClass="h-56"
-              />
+              {activeModalBlueprint.modelPath ? (
+                <ModelCardViewer
+                  modelPath={activeModalBlueprint.modelPath}
+                  badgeLabel={activeModalBlueprint.category}
+                  heightClass="h-56"
+                />
+              ) : activeModalBlueprint.imageUrl ? (
+                <div className="relative w-full h-56 rounded-xl overflow-hidden bg-zinc-100 border border-zinc-200">
+                  <img
+                    src={activeModalBlueprint.imageUrl}
+                    alt={activeModalBlueprint.name}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : null}
             </div>
 
             {/* Dashboard Telemetry Mock */}
