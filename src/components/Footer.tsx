@@ -5,10 +5,10 @@ export function Footer() {
   return (
     <footer className="bg-zinc-950 text-white pt-20 pb-12 border-t border-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-zinc-900">
-          
-          {/* Brand Info */}
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-zinc-800">
+
+          {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2.5 mb-4">
               <div className="w-7 h-7 rounded overflow-hidden bg-white shrink-0">
@@ -21,101 +21,109 @@ export function Footer() {
                 />
               </div>
               <span className="font-semibold text-lg tracking-tight text-white font-sans">
-                Tectonic <span className="text-xs font-mono text-zinc-400">NG</span>
+                Tectonic
               </span>
             </div>
 
-            <p className="text-xs text-zinc-400 max-w-sm leading-relaxed mb-6 font-mono">
-              Tectonic NG Technologies Ltd is a registered corporate product engineering studio. Designing and maintaining transactional web, mobile, and WebGL architectures.
+            <p className="text-xs text-zinc-400 max-w-sm leading-relaxed mb-6">
+              A website, business tools, and 3D visualization studio based in Ibadan, Nigeria. We help brands look premium and operate smarter.
             </p>
 
             <div className="text-[11px] font-mono text-zinc-500 space-y-1">
-              <div>Corporate Affairs Commission: <strong>RC-741908</strong></div>
-              <div>Data Protection: <strong>NDPR Compliant</strong></div>
-              <div>Headquarters: <strong>Ibadan, Nigeria (GMT+1)</strong></div>
+              <div>CAC Registration: <strong className="text-zinc-400">RC-741908</strong></div>
+              <div>Data Protection: <strong className="text-zinc-400">NDPR Compliant</strong></div>
+              <div>Headquarters: <strong className="text-zinc-400">Ibadan, Nigeria (GMT+1)</strong></div>
             </div>
           </div>
 
-          {/* Solutions Column */}
+          {/* Services */}
           <div>
             <h4 className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-4 font-semibold">
-              Solutions
+              Services
             </h4>
-            <ul className="space-y-2.5 text-xs text-zinc-400 font-mono">
+            <ul className="space-y-2.5 text-xs text-zinc-400">
               <li>
                 <a href="#solutions" className="hover:text-white transition-colors">
-                  SME Systems &amp; POS
+                  Business Websites
                 </a>
               </li>
               <li>
                 <a href="#solutions" className="hover:text-white transition-colors">
-                  Diaspora Milestone Escrow
+                  Business Tools
                 </a>
               </li>
               <li>
                 <a href="#solutions" className="hover:text-white transition-colors">
-                  Nearshore Engineering Pods
+                  Business Automation
                 </a>
               </li>
               <li>
-                <a href="#calculator" className="hover:text-white transition-colors">
-                  Scope &amp; Budget Estimator
+                <a href="#solutions" className="hover:text-white transition-colors">
+                  3D Visualization
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Technology Column */}
+          {/* Technology */}
           <div>
             <h4 className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-4 font-semibold">
-              Core Architecture
+              Technology
             </h4>
-            <ul className="space-y-2.5 text-xs text-zinc-400 font-mono">
+            <ul className="space-y-2.5 text-xs text-zinc-400">
               <li>
                 <a href="#stack" className="hover:text-white transition-colors">
-                  Next.js 16 &amp; React 19
+                  Next.js 16
                 </a>
               </li>
               <li>
                 <a href="#stack" className="hover:text-white transition-colors">
-                  Three.js &amp; WebGL
+                  Three.js & WebGL
                 </a>
               </li>
               <li>
                 <a href="#stack" className="hover:text-white transition-colors">
-                  NestJS Microservices
+                  React & TailwindCSS
                 </a>
               </li>
               <li>
                 <a href="#stack" className="hover:text-white transition-colors">
-                  PostgreSQL &amp; Redis Ledgers
+                  Paystack & Flutterwave
                 </a>
               </li>
               <li>
                 <a href="#stack" className="hover:text-white transition-colors">
-                  Paystack / Flutterwave Rails
+                  PostgreSQL & Prisma
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Governance & Compliance */}
+          {/* Contact */}
           <div>
             <h4 className="text-[11px] font-mono uppercase tracking-wider text-zinc-400 mb-4 font-semibold">
-              Contract &amp; Governance
+              Contact
             </h4>
-            <ul className="space-y-2.5 text-xs text-zinc-400 font-mono">
+            <ul className="space-y-2.5 text-xs text-zinc-400">
               <li>
-                <span className="text-zinc-200 block font-semibold">Full IP Assignment</span>
-                <span className="text-[10px] text-zinc-500">100% Repository Transfer</span>
+                <a href="mailto:tectonicteamz@gmail.com" className="hover:text-white transition-colors break-all">
+                  tectonicteamz@gmail.com
+                </a>
               </li>
-              <li className="pt-1.5">
-                <span className="text-zinc-200 block font-semibold">Milestone Escrows</span>
-                <span className="text-[10px] text-zinc-500">Scheduled Staging Clearances</span>
+              <li>
+                <a href="https://wa.me/2347085905248" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  07085905248 (WhatsApp)
+                </a>
               </li>
-              <li className="pt-1.5">
-                <span className="text-zinc-200 block font-semibold">NDPR Certified</span>
-                <span className="text-[10px] text-zinc-500">Encrypted Data Retention</span>
+              <li className="pt-1">
+                <a href="#contact" className="hover:text-white transition-colors">
+                  Start a Project
+                </a>
+              </li>
+              <li>
+                <a href="#pricing" className="hover:text-white transition-colors">
+                  View Pricing
+                </a>
               </li>
             </ul>
           </div>
@@ -125,12 +133,11 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-zinc-500 gap-4">
           <div>
-            &copy; {new Date().getFullYear()} Tectonic NG Technologies Ltd. All rights reserved.
+            &copy; {new Date().getFullYear()} Tectonic. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <a href="#" className="hover:text-zinc-300">Privacy Policy</a>
-            <a href="#" className="hover:text-zinc-300">Terms of Governance</a>
-            <a href="#" className="hover:text-zinc-300">Information Security</a>
+            <a href="#" className="hover:text-zinc-300">Terms</a>
           </div>
         </div>
 

@@ -6,100 +6,94 @@ import { Check, ArrowRight } from "lucide-react";
 export function PricingSection() {
   const tiers = [
     {
-      name: "MVP Engineering Sprint",
-      tagline: "For early-stage founders & diaspora launching a commercial v1 product.",
-      priceUSD: "$3,500",
-      priceNGN: "₦5,250,000",
-      duration: "Fixed Scope • 4-Week Delivery",
-      badge: "Founders & Startups",
+      name: "Starter Website",
+      tagline: "For small businesses that need a clean, fast, professional online presence.",
+      priceNGN: "₦150k – ₦350k",
+      priceUSD: "$200 – $450",
+      duration: "2 – 3 Weeks Delivery",
+      badge: "Small Business",
       highlight: false,
       features: [
-        "Full Next.js 16 + NestJS REST / GraphQL API stack",
-        "Mobile-first responsive interface in TailwindCSS",
-        "Authentication (OAuth, JWT, email magic links)",
-        "PostgreSQL relational schema + Prisma / Drizzle ORM",
-        "Paystack or Stripe payment gateway with idempotent webhooks",
-        "Automated CI/CD staging pipeline on Railway / Vercel",
-        "100% intellectual property transfer & private GitHub repository",
-        "30-day post-handover bug warranty & SLA",
+        "Up to 5 pages — Home, About, Services, Portfolio, Contact",
+        "Mobile-first responsive design, no templates",
+        "Contact form and basic SEO setup",
+        "Fast hosting configuration and domain connection",
+        "Full ownership — your website, your files, your hosting",
+        "14-day post-launch support warranty",
       ],
-      cta: "Inquire on MVP Sprint",
+      cta: "Get a Starter Website",
     },
     {
-      name: "Dedicated Engineering Pod",
-      tagline: "For funded startups and foreign digital teams needing nearshore velocity.",
-      priceUSD: "$4,200",
-      priceNGN: "₦6,300,000",
-      duration: "Monthly Retainer • Rolling Contract",
-      badge: "Nearshore Teams",
+      name: "Business Website + Tool",
+      tagline: "For growing brands that need a strong site and a tool that saves hours every week.",
+      priceNGN: "₦400k – ₦800k",
+      priceUSD: "$500 – $1,000",
+      duration: "3 – 5 Weeks Delivery",
+      badge: "Most Popular",
       highlight: true,
       features: [
-        "Dedicated Senior Full-Stack Engineer + QA Lead",
-        "Core stack: Next.js 16, Three.js (WebGL), NestJS, PostgreSQL",
-        "Aligned timezone: GMT+1 (Direct Slack, Discord & Linear sync)",
-        "Daily asynchronous standups + weekly milestone demonstrations",
-        "Playwright & Vitest automated test suites",
-        "High-availability cloud infrastructure (AWS / Docker)",
-        "Terminable with 14-day notice — zero vendor lock-in",
-        "Zero employee pension, benefits, or local tax overhead",
+        "Full business website with custom design and animations",
+        "One business tool — booking system, invoice generator, or staff portal",
+        "Payment integration (Paystack, Flutterwave, or Stripe)",
+        "Business automation — scheduled emails, form pipelines, or reports",
+        "Client dashboard or admin panel for managing data",
+        "30-day post-launch support and maintenance",
       ],
-      cta: "Reserve Engineering Pod",
+      cta: "Start a Business Package",
     },
     {
-      name: "SME Operations Overhaul",
-      tagline: "For established Nigerian businesses eliminating manual operational loss.",
-      priceUSD: "$2,200",
-      priceNGN: "₦3,400,000",
-      duration: "Fixed Scope + Support Retainer",
-      badge: "Domestic Enterprises",
+      name: "3D Visualization",
+      tagline: "For brands that need photorealistic renders — properties, products, or machines.",
+      priceNGN: "₦500k – ₦2M+",
+      priceUSD: "$600 – $2,500+",
+      duration: "Scoped Per Project",
+      badge: "Premium",
       highlight: false,
       features: [
-        "Multi-warehouse inventory, POS, or logistics dashboard",
-        "Multi-channel payment reconciliation (Moniepoint, Paystack)",
-        "Offline-resilient data synchronization for poor network",
-        "Role-based staff clearance (prevent internal leakage and fraud)",
-        "Automated WhatsApp & SMS customer transaction dispatch",
-        "On-site staff onboarding (Ibadan / Lagos) or remote orientation",
-        "Direct local technical support desk",
-        "99.9% uptime hosting configuration",
+        "Interactive Three.js / WebGL visualization in the browser",
+        "Photorealistic PBR materials — concrete, glass, metal, fabric, wood",
+        "Architectural walkthroughs, product configurators, or industrial renders",
+        "Optimized for mobile and slow Nigerian connections",
+        "Embeddable in any existing website or standalone experience",
+        "Full source code and asset ownership on delivery",
       ],
-      cta: "Inquire on SME Modernization",
+      cta: "Inquire on 3D Project",
     },
   ];
 
   return (
-    <section id="pricing" className="py-24 bg-white border-b border-zinc-200">
+    <section id="pricing" className="py-24 bg-zinc-50 border-b border-zinc-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded border border-zinc-200 bg-zinc-50 text-[11px] font-mono text-zinc-600 uppercase tracking-wider mb-4">
-            Engagement Structures
+          <div className="inline-block px-3 py-1 rounded border border-zinc-200 bg-white text-[11px] font-mono text-zinc-500 uppercase tracking-wider mb-4">
+            Pricing
           </div>
           <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-zinc-950 font-sans">
-            Transparent Retainers &amp; Fixed Milestones
+            Clear prices. No surprises.
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-zinc-600 leading-relaxed">
-            Predictable capital allocation with strict milestone-based delivery. No unbudgeted hourly creep or opaque staffing bills.
+          <p className="mt-4 text-sm sm:text-base text-zinc-500 leading-relaxed">
+            Fixed-scope delivery with transparent pricing in NGN and USD. You own everything we build.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
           {tiers.map((tier, index) => (
             <div
               key={index}
-              className={`rounded-xl p-8 flex flex-col justify-between transition-all ${
+              className={`rounded-2xl p-8 flex flex-col justify-between transition-all ${
                 tier.highlight
                   ? "bg-zinc-950 text-white shadow-2xl border border-zinc-800"
-                  : "bg-zinc-50/70 text-zinc-900 border border-zinc-200"
+                  : "bg-white text-zinc-900 border border-zinc-200"
               }`}
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <span
-                    className={`text-[11px] font-mono font-medium px-2 py-0.5 rounded ${
+                    className={`text-[10px] font-mono font-semibold px-2 py-0.5 rounded-full ${
                       tier.highlight
-                        ? "bg-zinc-800 text-zinc-200 border border-zinc-700"
-                        : "bg-zinc-200 text-zinc-700"
+                        ? "bg-white text-zinc-950"
+                        : "bg-zinc-100 text-zinc-600"
                     }`}
                   >
                     {tier.badge}
@@ -109,50 +103,27 @@ export function PricingSection() {
                 <h3 className="text-xl font-semibold tracking-tight mb-1">
                   {tier.name}
                 </h3>
-                <p
-                  className={`text-xs leading-relaxed mb-6 font-mono ${
-                    tier.highlight ? "text-zinc-400" : "text-zinc-500"
-                  }`}
-                >
+                <p className={`text-xs leading-relaxed mb-6 ${tier.highlight ? "text-zinc-400" : "text-zinc-500"}`}>
                   {tier.tagline}
                 </p>
 
-                <div className="mb-6 pb-6 border-b border-zinc-200/40">
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-3xl font-bold tracking-tight font-mono">
-                      {tier.priceUSD}
-                    </span>
-                    <span
-                      className={`text-xs font-mono ${
-                        tier.highlight ? "text-zinc-400" : "text-zinc-500"
-                      }`}
-                    >
-                      / {tier.priceNGN}
-                    </span>
+                <div className={`mb-6 pb-6 border-b ${tier.highlight ? "border-zinc-800" : "border-zinc-100"}`}>
+                  <div className="text-2xl font-bold tracking-tight font-mono">
+                    {tier.priceNGN}
                   </div>
-                  <div
-                    className={`text-xs font-mono mt-1 ${
-                      tier.highlight ? "text-zinc-300 font-semibold" : "text-zinc-600"
-                    }`}
-                  >
+                  <div className={`text-xs font-mono mt-0.5 ${tier.highlight ? "text-zinc-400" : "text-zinc-400"}`}>
+                    {tier.priceUSD} USD equivalent
+                  </div>
+                  <div className={`text-xs font-mono mt-1 font-semibold ${tier.highlight ? "text-zinc-300" : "text-zinc-600"}`}>
                     {tier.duration}
                   </div>
                 </div>
 
-                {/* Features list */}
-                <div className="space-y-2.5 font-mono text-xs">
+                <div className="space-y-2.5 text-xs">
                   {tier.features.map((feature, fIdx) => (
                     <div key={fIdx} className="flex items-start gap-2.5">
-                      <Check
-                        className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${
-                          tier.highlight ? "text-zinc-300" : "text-zinc-600"
-                        }`}
-                      />
-                      <span
-                        className={`leading-snug ${
-                          tier.highlight ? "text-zinc-300" : "text-zinc-700"
-                        }`}
-                      >
+                      <Check className={`w-3.5 h-3.5 shrink-0 mt-0.5 ${tier.highlight ? "text-zinc-400" : "text-zinc-400"}`} />
+                      <span className={`leading-snug ${tier.highlight ? "text-zinc-300" : "text-zinc-600"}`}>
                         {feature}
                       </span>
                     </div>
@@ -163,9 +134,9 @@ export function PricingSection() {
               <div className="mt-8 pt-6 border-t border-zinc-200/20">
                 <a
                   href="#contact"
-                  className={`w-full inline-flex items-center justify-between py-2.5 px-4 rounded-lg text-xs font-semibold font-sans transition-all cursor-pointer ${
+                  className={`w-full inline-flex items-center justify-between py-2.5 px-4 rounded-lg text-xs font-semibold transition-all ${
                     tier.highlight
-                      ? "bg-white text-zinc-950 hover:bg-zinc-200"
+                      ? "bg-white text-zinc-950 hover:bg-zinc-100"
                       : "bg-zinc-950 text-white hover:bg-zinc-800"
                   }`}
                 >
@@ -176,6 +147,10 @@ export function PricingSection() {
             </div>
           ))}
         </div>
+
+        <p className="text-center text-xs text-zinc-400 font-mono mt-8">
+          All prices are indicative. Final scope and pricing confirmed after a free discovery call.
+        </p>
 
       </div>
     </section>

@@ -4,99 +4,97 @@ import { Check, ArrowRight } from "lucide-react";
 export function PillarsSection() {
   const pillars = [
     {
-      id: "sme",
-      badge: "Market 01 / Domestic",
-      title: "Nigerian SMEs & Scaling Enterprises",
-      subtitle: "Eliminate inventory variances, un-reconciled bank transfers, and fragile commercial software.",
+      id: "realestate",
+      badge: "Segment 01",
+      title: "Real Estate & Architecture",
+      subtitle: "Help buyers see it before it is built. Interactive 3D walkthroughs, photorealistic renders, and property websites that close deals faster.",
       features: [
-        "Paystack, Flutterwave & Moniepoint webhook automation",
-        "Offline-resilient architecture engineered for erratic bandwidth",
-        "Multi-warehouse inventory, POS, and internal audit tracking",
-        "Local currency billing (NGN) with zero foreign exchange risk",
+        "Interactive architectural walkthroughs with real-world materials and lighting",
+        "Property listing sites with booking, virtual tour, and inquiry flow",
+        "Photorealistic renders of homes and developments — no photoshoot required",
+        "Estate agent portfolio sites that stand out from templated competitors",
       ],
-      ctaText: "Inquire on SME Systems",
+      ctaText: "Inquire on Real Estate",
     },
     {
-      id: "diaspora",
-      badge: "Market 02 / Cross-Border",
-      title: "Diaspora Founders & Cross-Border Ventures",
-      subtitle: "Execute tech products in Africa with institutional governance and enforceable accountability.",
+      id: "retail",
+      badge: "Segment 02",
+      title: "Retail, Fashion & Products",
+      subtitle: "Showcase your products in stunning detail. Real-time 3D configurators, brand-forward online stores, and business tools that run your operations.",
       features: [
-        "Sprint-by-sprint staging builds and automated repository access",
-        "Milestone-based escrow contracts (USD, GBP, EUR, CAD, NGN)",
-        "On-the-ground operational insight paired with clean TypeScript",
-        "Full intellectual property assignment under binding commercial contracts",
+        "3D product configurators — change colour, material, and finish in real time",
+        "Online stores and lookbooks with fast mobile checkout",
+        "Inventory, order management, and invoice automation",
+        "Automated customer notifications and scheduling tools",
       ],
-      ctaText: "Inquire on Venture Studio",
+      ctaText: "Inquire on Retail",
     },
     {
-      id: "outsourcing",
-      badge: "Market 03 / Global Nearshore",
-      title: "Foreign Tech Companies & Digital Agencies",
-      subtitle: "Senior engineering pods operating in GMT+1 at 40-50% cost advantage.",
+      id: "international",
+      badge: "Segment 03",
+      title: "International & Diaspora Brands",
+      subtitle: "Premium web and 3D production from Ibadan, delivered to international standards. Billed in USD or GBP with clear milestones and full ownership.",
       features: [
-        "Dedicated senior pods: Next.js 16, Three.js (WebGL), and NestJS backends",
-        "Direct timezone overlap with London, Berlin, and US East Coast",
-        "Automated CI/CD pipelines, test coverage (Playwright/Vitest), and Docker",
-        "Flexible staff augmentation or autonomous delivery squads",
+        "Photorealistic Three.js and WebGL production for European and UK clients",
+        "Full-stack websites and web applications in Next.js",
+        "Direct GMT+1 timezone alignment with London and European teams",
+        "Fixed-scope delivery with 100% intellectual property assignment",
       ],
-      ctaText: "Inquire on Nearshore Pods",
+      ctaText: "Inquire on International",
     },
   ];
 
   return (
-    <section id="solutions" className="py-24 bg-zinc-50/60 border-b border-zinc-200">
+    <section id="solutions" className="py-24 bg-white border-b border-zinc-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Section Header */}
+
+        {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <div className="inline-block px-3 py-1 rounded border border-zinc-200 bg-white text-[11px] font-mono text-zinc-600 uppercase tracking-wider mb-4">
-            Engagement Categories
+          <div className="inline-block px-3 py-1 rounded border border-zinc-200 bg-zinc-50 text-[11px] font-mono text-zinc-500 uppercase tracking-wider mb-4">
+            Who We Work With
           </div>
           <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-zinc-950 font-sans">
-            Engineered for Commercial Reality
+            Built for brands that want to stand out
           </h2>
-          <p className="mt-4 text-sm sm:text-base text-zinc-600 leading-relaxed">
-            We adapt contract structures, payment schedules, and system resilience to the specific operating requirements of each client profile.
+          <p className="mt-4 text-sm sm:text-base text-zinc-500 leading-relaxed">
+            Whether you need a professional website, an automated business tool, or a photorealistic 3D visualization — we deliver work that earns attention.
           </p>
         </div>
 
-        {/* 3 Pillars Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="bg-white rounded-xl p-8 border border-zinc-200 shadow-xs flex flex-col justify-between"
+              className="bg-zinc-50 rounded-2xl p-8 border border-zinc-100 flex flex-col justify-between hover:border-zinc-200 transition-colors"
             >
               <div>
-                <span className="inline-block text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-zinc-100 text-zinc-700 mb-6">
+                <span className="inline-block text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-zinc-200 text-zinc-600 mb-6">
                   {pillar.badge}
                 </span>
 
-                <h3 className="text-xl font-semibold text-zinc-950 tracking-tight mb-2">
+                <h3 className="text-xl font-semibold text-zinc-950 tracking-tight mb-3">
                   {pillar.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed mb-6">
+                <p className="text-sm text-zinc-500 leading-relaxed mb-6">
                   {pillar.subtitle}
                 </p>
 
-                <div className="space-y-2.5 pt-4 border-t border-zinc-100 font-mono text-xs text-zinc-700">
+                <div className="space-y-2.5 pt-4 border-t border-zinc-200 text-xs text-zinc-600">
                   {pillar.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-2.5">
-                      <Check className="w-3.5 h-3.5 text-zinc-500 shrink-0 mt-0.5" />
-                      <span className="leading-snug">
-                        {feature}
-                      </span>
+                      <Check className="w-3.5 h-3.5 text-zinc-400 shrink-0 mt-0.5" />
+                      <span className="leading-snug">{feature}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-zinc-100">
+              <div className="mt-8 pt-6 border-t border-zinc-200">
                 <a
                   href="#contact"
-                  className="w-full inline-flex items-center justify-between py-2.5 px-4 rounded-lg bg-zinc-950 text-white font-sans font-semibold text-xs hover:bg-zinc-800 transition-all"
+                  className="w-full inline-flex items-center justify-between py-2.5 px-4 rounded-lg bg-zinc-950 text-white font-semibold text-xs hover:bg-zinc-800 transition-all"
                 >
                   <span>{pillar.ctaText}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
