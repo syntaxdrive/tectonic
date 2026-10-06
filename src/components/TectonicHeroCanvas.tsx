@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader.js";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { Sparkles, Eye, RotateCw, MapPin, Layers } from "lucide-react";
 
@@ -86,7 +87,7 @@ export function TectonicHeroCanvas() {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.25;
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.shadowMap.type = THREE.PCFShadowMap;
     container.appendChild(renderer.domElement);
 
     // OrbitControls
@@ -169,7 +170,10 @@ export function TectonicHeroCanvas() {
 
     let currentModel: THREE.Object3D | null = null;
     let mixer: THREE.AnimationMixer | null = null;
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath("https://www.gstatic.com/draco/versioned/decoders/1.5.7/");
     const loader = new GLTFLoader();
+    loader.setDRACOLoader(dracoLoader);
 
     const loadModel = (modelPath: string) => {
       setLoading(true);
@@ -293,6 +297,7 @@ export function TectonicHeroCanvas() {
       cancelAnimationFrame(animationFrameId);
       resizeObserver.disconnect();
       controls.dispose();
+      dracoLoader.dispose();
       if (container.contains(renderer.domElement)) {
         container.removeChild(renderer.domElement);
       }
